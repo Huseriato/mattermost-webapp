@@ -139,10 +139,10 @@ export default class PostAddChannelMember extends React.PureComponent {
         let messageText;
         if (usernames.length === 1) {
             messageId = t('post_body.check_for_out_of_channel_mentions.message.one');
-            messageText = 'was mentioned but is not in the channel. Would you like to ';
+            messageText = 'did not get notified by this mention because they are not in the channel. Would you like to ';
         } else if (usernames.length > 1) {
             messageId = t('post_body.check_for_out_of_channel_mentions.message.multiple');
-            messageText = 'were mentioned but they are not in the channel. Would you like to ';
+            messageText = 'did not get notified by this mention because they are not in the channel. Would you like to ';
         }
 
         const atMentions = this.generateAtMentions(usernames);
